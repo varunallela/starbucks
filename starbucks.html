@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>starbucks website Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png".class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not a coffee<br> its <span>Star Bucks</span></h2>
+                <p>A coffeehouse, coffee shop, or café is an establishment that primarily serves coffee of various types, 
+                    notably espresso, latte and cappuccino. Some coffeehouses may serve cold drinks, such as iced coffee,
+                     iced tea, as well as other non-caffeinated beverages. In continental Europe, cafés serve alcoholic drinks.</p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+        <div class="img" style="z-index:0">
+            <img src="img1.png" class="starbucks">
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCirclecolor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCirclecolor('#eb7945')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCirclecolor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCirclecolor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    
+</body>
+</html>
